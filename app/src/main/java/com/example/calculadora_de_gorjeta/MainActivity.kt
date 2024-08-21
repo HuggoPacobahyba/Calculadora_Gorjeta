@@ -32,31 +32,34 @@ class MainActivity : AppCompatActivity() {
             val tipStr: String = edtTip.text.toString()
             val pessoasStr: String = edtPessoas.text.toString()
 
-            if (priceStr == "" || tipStr == "" || pessoasStr == "") {
 
-                Snackbar.make(
-                    edtPrice,
-                    "Preencha todos os campos",
-                    Snackbar.LENGTH_LONG
-                )
-                    .show()
-            } else {
-                val price = priceStr.toFloat()
-                val tip = tipStr.toFloat()
-                val pessoas = pessoasStr.toFloat()
+            if (priceStr == "" || tipStr == "" || pessoasStr == "" || pessoasStr == "0") {
 
-                val priceQ2 = price / pessoas
-                val tipQ2 = (price * tip) / (100 * pessoas)
-                val result = priceQ2 + tipQ2
-                //resultPrice.text = result.toString()
-                resultPrice.text = "R$ %.2f".format(result)
-                resultNotip.text = priceQ2.toString()
-                resultTip.text = tipQ2.toString()
+                    Snackbar.make(
+                        edtPrice,
+                        "Preencha todos os campos",
+                        Snackbar.LENGTH_LONG
+                    )
+                        .show()
+                } else {
+                    val price = priceStr.toFloat()
+                    val tip = tipStr.toFloat()
+                    val pessoas = pessoasStr.toFloat()
+
+                    val priceQ2 = price / pessoas
+                    val tipQ2 = (price * tip) / (100 * pessoas)
+                    val result = priceQ2 + tipQ2
+                    //resultPrice.text = result.toString()
+                    resultPrice.text = "R$ %.2f".format(result)
+                    resultNotip.text = priceQ2.toString()
+                    resultTip.text = tipQ2.toString()
 
 
+                }
             }
+
+
         }
 
 
     }
-}

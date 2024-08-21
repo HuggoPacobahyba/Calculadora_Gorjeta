@@ -213,6 +213,7 @@
             android:layout_marginTop="120dp"
             android:textColor="@color/green"
             android:textSize="28sp"
+            android:maxLength="7"
             android:textStyle="bold"
             tools:text="30.76" />
 
@@ -224,6 +225,7 @@
             android:layout_marginTop="120dp"
             android:textColor="@color/green"
             android:textSize="28sp"
+            android:maxLength="7"
             android:textStyle="bold"
             tools:text="3.076" />
 
